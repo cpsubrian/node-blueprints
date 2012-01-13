@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+/**
+ * Brew
+ *
+ * A command-line utility for initializing project structures.
+ */
+
+var commander = require('commander');
+
+commander
+	.version('0.0.1')
+	.parse(process.argv)
+
+console.log("You don't have the correct ingredients to brew anything.");

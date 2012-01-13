@@ -1,0 +1,23 @@
+{
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "name": "brew",
+  "description": "A command-line utilty for initializing project structures and basic functionality.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cpsubrian/brew.git"
+  },
+  "main": "lib/brew.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": "~0.6.7"
+  },
+  "dependencies": {
+    "commander": "~0.5.1"
+  },
+  "devDependencies": {
+    "mocha": "~0.9.0"
+  }
+}
