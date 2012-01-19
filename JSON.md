@@ -2,6 +2,7 @@
 
 Every blueprint should have a `blueprints.json` file.
 
+***
 
 ## Example blueprints.json ##
 
@@ -9,6 +10,7 @@ Every blueprint should have a `blueprints.json` file.
       key: "Example here"
     }
 
+***
 
 ## Available options: ##
 
