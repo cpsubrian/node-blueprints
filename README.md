@@ -1,5 +1,5 @@
-# Brew
+# Blueprints
 
-A command-lind node.js/coffeescript utility for initializing project structures.
+A command-lind node.js utility for initializing project structures.
 
 ## Work in progress .. usagle and examples coming ##
