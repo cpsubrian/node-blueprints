@@ -1,19 +1,27 @@
 {
   "author": "Brian Link <cpsubrian@gmail.com>",
-  "name": "brew",
+  "name": "blueprints",
   "description": "A command-line utilty for initializing project structures and basic functionality.",
+  "keywords": ['blueprints', 'blueprint', 'scaffold', 'scaffolding', 'project', 'projects'],
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cpsubrian/brew.git"
+    "url": "git://github.com/cpsubrian/node-blueprints.git"
   },
-  "main": "lib/brew.js",
+  "homepage": "http://www.node-blueprints.com",
+  "bugs": "https://github.com/cpsubrian/node-blueprints/issues",
+  "main": "lib/blueprints.js",
+  "bin": {
+    "nbp": "./bin/blueprints",
+    "blueprints": "./bin/blueprints"
+  },
   "scripts": {
     "test": "mocha"
   },
   "engines": {
     "node": "~0.6.7"
   },
+  "preferGlobal": true,
   "dependencies": {
     "commander": "~0.5.1"
   },

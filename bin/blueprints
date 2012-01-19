@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Brew
+ * Blueprints
  *
  * A command-line utility for initializing project structures.
  */
@@ -12,4 +12,4 @@ commander
 	.version('0.0.1')
 	.parse(process.argv)
 
-console.log("You don't have the correct ingredients to brew anything.");
+console.log("Sweet! Test commander interface working.");
