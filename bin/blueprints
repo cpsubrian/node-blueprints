@@ -6,7 +6,9 @@
  * A command-line utility for initializing project structures.
  */
 
-var commander = require('commander');
+var commander = require('commander')
+ ,  blueprints = require('../lib/blueprints')
+;
 
 commander
 	.version('0.0.1')

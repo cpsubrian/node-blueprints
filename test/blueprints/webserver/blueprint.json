@@ -1,0 +1,5 @@
+{
+	"name": "Web Server"
+, "description": "Sample HTTP web server blueprint for testing"
+, "version": "1.0.0"
+}

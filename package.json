@@ -1,31 +1,33 @@
 {
-  "author": "Brian Link <cpsubrian@gmail.com>",
-  "name": "blueprints",
-  "description": "A command-line utilty for initializing project structures and basic functionality.",
-  "keywords": ['blueprints', 'blueprint', 'scaffold', 'scaffolding', 'project', 'projects'],
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/cpsubrian/node-blueprints.git"
-  },
-  "homepage": "http://www.node-blueprints.com",
-  "bugs": "https://github.com/cpsubrian/node-blueprints/issues",
-  "main": "lib/blueprints.js",
-  "bin": {
-    "nbp": "./bin/blueprints",
-    "blueprints": "./bin/blueprints"
-  },
-  "scripts": {
+  "author": "Brian Link <cpsubrian@gmail.com>"
+, "name": "blueprints"
+, "description": "A command-line utilty for initializing project structures and basic functionality."
+, "keywords": ["blueprints", "blueprint", "scaffold", "scaffolding", "project", "projects"]
+, "version": "0.0.1"
+, "repository": {
+    "type": "git"
+  , "url": "git://github.com/cpsubrian/node-blueprints.git"
+  }
+, "homepage": "http://www.node-blueprints.com"
+, "bugs": "https://github.com/cpsubrian/node-blueprints/issues"
+, "main": "lib/blueprints.js"
+, "bin": {
+    "nbp": "./bin/blueprints"
+  , "blueprints": "./bin/blueprints"
+  }
+, "scripts": {
     "test": "mocha"
-  },
-  "engines": {
+  }
+, "engines": {
     "node": "~0.6.7"
-  },
-  "preferGlobal": true,
-  "dependencies": {
+  }
+, "preferGlobal": true
+, "dependencies": {
     "commander": "~0.5.1"
-  },
-  "devDependencies": {
+  , "hogan.js": "~1.0.2"
+  }
+, "devDependencies": {
     "mocha": "~0.9.0"
+  , "should": "~0.5.1"
   }
 }
