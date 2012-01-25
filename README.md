@@ -10,7 +10,7 @@ A command-lind node.js utility for creating and sharing project and file scaffol
 Each blueprint should contain a `blueprint.json` file that describes
 what the blueprint does and why someone would want you use it. 
 
-You can read all about the format in [JSON.md][https://github.com/cpsubrian/node-blueprints/blob/master/JSON.md].
+You can read all about the format in [JSON.md](https://github.com/cpsubrian/node-blueprints/blob/master/JSON.md).
 
 
 ## Namespaces ##
