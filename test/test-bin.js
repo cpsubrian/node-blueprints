@@ -1,6 +1,7 @@
 /**
  * Test the blueprints command-line tool.
  */
+ 
 var path = require('path')
   , fs = require('fs')
   , exec = require('child_process').exec
