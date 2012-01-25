@@ -25,12 +25,13 @@ Every blueprint should have a `blueprint.json` file.
 
 ## Available options: ##
 
-## namespace ###
+### namespace ###
 The namespace of the blueprint.
 
 `namespace` + `name` should form a unique pairing.
 
 Can only contain alpha-numeric characters plus `_` and `-`.
+
 
 ### name ###
 The machine name of the blueprint.
@@ -39,27 +40,34 @@ The machine name of the blueprint.
 
 Can only contain alpha-numeric characters plus `_` and `-`.
 
+
 ### title ###
 A human-readable title for the blueprint.
+
 
 ### description ###
 A human friendly description about what your blueprint does, and why someone would want to use it.
 
+
 ### version ###
 A semver version number.
+
 
 ### languages ###
 Which programming languages the blueprint utilizes.
 
 Examples: `js`, `css`, `html`, `php`, `ruby`
 
+
 ### platforms ###
 Which platform the blueprint targets.
 
 Examples: `node.js`, `rails`, `drupal`, `django`
 
+
 ### tags ###
 Arbitraty tags to categorize your blueprint for better search results.
+
 
 ### delimeter ###
 The delimeter to use for escaping blueprint variables.  Defaults to `|[` and `]|`.
