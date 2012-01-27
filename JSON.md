@@ -25,7 +25,7 @@ Every blueprint should have a `blueprint.json` file.
 
 ## Available options: ##
 
-### namespace <span style="float: right; font-size: 0.8em;">Required</span> ###
+### namespace - <small>Required</small> ###
 The namespace of the blueprint.
 
 `namespace` + `name` should form a unique pairing.
