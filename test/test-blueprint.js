@@ -5,39 +5,100 @@
 
 var Blueprint = require('../lib/blueprint.js')
   , path = require('path')
+  , should = require('should')
 ;
 
 describe('Blueprint object', function() {  
-  var testPaths = {
-    tcp:            path.resolve(__dirname, './blueprints/tcp')
-  , webserver:      path.resolve(__dirname, './blueprints/webserver')
-  , badjson:        path.resolve(__dirname, './blueprints/badjson')
-  , incompletejson: path.resolve(__dirname, './blueprints/incompletejson')
-  };
 
-  describe('Constructor', function() {
-    var tcpBlueprint = new Blueprint(testPaths.tcp)
+  // Test the TCP blueprint.
+  describe ('A valid blueprint', function() {
+    var tcpPath = path.resolve(__dirname, './blueprints/tcp')
+      , blueprint = new Blueprint(tcpPath)
+      , error = null
+    ;
 
-    it('should return a Blueprint object', function() {
-      tcpBlueprint.should.be.an.instanceof(Blueprint);
+    describe('Constructor', function() {
+      it('should return a Blueprint object', function() {
+        blueprint.should.be.an.instanceof(Blueprint);
+      });
+
+      it('should have the path set', function() {
+        blueprint.should.have.property('path', tcpPath);
+      });
     });
 
-    it('should have the path set', function() {
-      tcpBlueprint.should.have.property('path', testPaths.tcp);
+    describe('Validate', function() {
+      before(function(done) {
+        blueprint.validate(function(err){
+          error = err;
+          done();
+        })
+      });
+
+      it('should run with no errors', function() {
+        should.not.exist(error);
+      })
     });
   });
 
-  describe('Validate', function() {
-    describe ('A valid blueprint', function() {
-      
-    });
+  // Test the Bad JSON blueprint.
+  describe('A blueprint with invalid json', function() {
+    var blueprint = new Blueprint(path.resolve(__dirname, './blueprints/badjson'))
+      , error = null
+    ;
 
-    describe('A blueprint with invalid json', function() {
-      
-    });
+    describe('Validate', function() {
+      before(function(done) {
+        blueprint.validate(function(err){
+          error = err;
+          done();
+        })
+      });
 
-    describe('A blueprint with missing properties', function(){
-      
+      it('should set the correct error message', function() {
+        console.log(error);
+        error.should.have.property('message', 'Invalid blueprint.json.  Could not parse.');
+      })
+    });
+  });
+
+  // Test th Incomplete JSON blueprint
+  describe('A blueprint with missing properties', function(){
+    var blueprint = new Blueprint(path.resolve(__dirname, './blueprints/incompletejson'))
+      , error = null
+    ;
+
+    describe('Validate', function() {
+      before(function(done) {
+        blueprint.validate(function(err){
+          error = err;
+          done();
+        })
+      });
+
+      it('should set the correct error message', function() {
+        error.should.have.property('message', 'Missing required propertie(s): namespace, name.');
+      })
+    });    
+  });
+
+  // Test th Missing JSON blueprint
+  describe('A blueprint with missing json', function(){
+    var blueprint = new Blueprint(path.resolve(__dirname, './blueprints/missingjson'))
+      , error = null
+    ;
+
+    describe('Validate', function() {
+      before(function(done) {
+        blueprint.validate(function(err){
+          error = err;
+          done();
+        })
+      });
+
+      it('should set the correct error message', function() {
+        error.should.have.property('message', 'No blueprint.json found.');
+      })
     });    
   });
 

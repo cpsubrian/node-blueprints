@@ -1,5 +1,10 @@
 {
-	"name": "Web Server"
-, "description": "Sample HTTP web server blueprint for testing"
-, "version": "1.0.0"
+    "namespace": "tests"
+  , "name": "webserver"
+  , "title": "Web Server"
+  , "description": "Sample HTTP web server blueprint for testing"
+  , "version": "1.0.0"
+  , "languages": ["js"]
+  , "platforms": ["node.js"]
+  , "tags": ["testing"]
 }

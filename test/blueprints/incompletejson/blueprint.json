@@ -1,3 +1,4 @@
 {
-  "description": "Missing required properties 'name' and 'version'""
+    "name": "incomplete"
+  , "description": "Missing required properties 'namespace' and 'version'""
 }
